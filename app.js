@@ -25,7 +25,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(_cors({
-  origin: ['http://localhost:4200'],
+  origin: ['http://localhost:4200', 'https://others-bafe3.web.app'],
   credentials: true
 }));
 
