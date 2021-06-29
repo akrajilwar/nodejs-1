@@ -34,7 +34,8 @@ app.use(passport.initialize());
 mongoose.set('useCreateIndex', true);
 mongoose.set('useFindAndModify', false);
 mongoose.set('useNewUrlParser', true);
-mongoose.connect('mongodb://localhost:27017/myProject', { useNewUrlParser: true, useUnifiedTopology: true });
+// mongoose.connect('mongodb://localhost:27017/myProject', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb+srv://snow:A123456@cluster0.5mtnj.mongodb.net/myProject?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
 
 const connection = mongoose.connection;
 connection.once('open', () => {
